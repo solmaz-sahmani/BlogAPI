@@ -118,7 +118,7 @@ DATABASES = {
         "NAME": env.str("DB_NAME"),
         "USER": env.str("DB_USER"),
         "PASSWORD": env.str("DB_PASSWORD"),
-        "HOST": env.str("DB_HOST", "localhost"),
+        "HOST": env.str("DB_HOST", "127.0.0.1"),
         "PORT": env.int("DB_PORT", 5432),
     }
 }
@@ -167,4 +167,9 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+
+
+# celery configs
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/1'
