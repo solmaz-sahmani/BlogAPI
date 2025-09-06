@@ -57,7 +57,7 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthonticated",
+        'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
@@ -119,7 +119,7 @@ DATABASES = {
         "USER": env.str("DB_USER"),
         "PASSWORD": env.str("DB_PASSWORD"),
         "HOST": env.str("DB_HOST", "127.0.0.1"),
-        "PORT": env.int("DB_PORT", 5432),
+        "PORT": env.str("DB_PORT", 5432),
     }
 }
 
@@ -161,6 +161,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
 #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFileStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
