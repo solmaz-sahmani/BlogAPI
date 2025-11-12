@@ -3,7 +3,7 @@
 This is a sample backend system built with Django and Docker, featuring:
 
 - **Django REST Framework (DRF)**: Build RESTful APIs for user registration, authentication, and other endpoints.
-- **Celery + Redis**: Handle background tasks asynchronously, e.g., sending welcome emails after registration.
+- **Celery + Redis**: Handle background tasks asynchronously.
 - **PostgreSQL**: Reliable relational database for storing user data.
 - **Swagger / drf-yasg**: API documentation with an interactive Swagger UI.
 - **Automated Test Cases**: Unit and integration tests for models, views, and API endpoints.
